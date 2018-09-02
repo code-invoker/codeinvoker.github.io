@@ -1,0 +1,41 @@
+{
+    "private": true,
+    "name": "codeinvoker",
+    "version": "1.0.0",
+    "license": "UNLICENSED",
+    "description": "Codeinvoker website",
+    "homepage": "https://github.com/code-invoker/codeinvoker.github.io#readme",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/code-invoker/codeinvoker.github.io.git"
+    },
+    "bugs": {
+        "url": "https://github.com/code-invoker/codeinvoker.github.io/issues"
+    },
+    "scripts": {
+        "test": "test"
+    },
+    "browserslist": {
+        "development": [
+            "last 2 versions"
+        ],
+        "production": [
+            "last 4 versions"
+        ]
+    },
+    "eslintIgnore": [
+        "!.*.js",
+        "dist"
+    ],
+    "stylelintIgnore": [
+        "dist"
+    ],
+    "devDependencies": {
+        "browser-sync": "^2.24.7",
+        "eslint": "^5.5.0",
+        "eslint-config-immortal": "^1.0.1",
+        "gulp": "^3.9.1",
+        "stylelint": "^9.5.0",
+        "stylelint-config-immortal": "^2.0.0"
+    }
+}

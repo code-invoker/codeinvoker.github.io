@@ -1,0 +1,15 @@
+title: Codeinvoker
+description: >-
+    Codeinvoker website description
+baseurl: ""
+url: ""
+twitter: codeinvoker
+github: codeinvoker
+facebook: codeinvoker
+
+markdown: kramdown
+plugins:
+    - jekyll-feed
+
+source: src
+destination: dist
