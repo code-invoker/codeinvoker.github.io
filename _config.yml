@@ -13,3 +13,6 @@ plugins:
 
 source: src
 destination: dist
+
+exclude:
+    - assets
