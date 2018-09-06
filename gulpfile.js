@@ -47,4 +47,4 @@ gulp.task('watch', gulp.parallel('styles', 'scripts', 'serve', () => {
   gulp.watch('./src/assets/scripts/**/*.js', gulp.series('scripts'));
 }));
 
-gulp.task('default', gulp.series('watch' ));
+gulp.task('default', gulp.series('watch'));
