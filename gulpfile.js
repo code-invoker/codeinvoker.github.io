@@ -31,6 +31,10 @@ gulp.task('scripts', () => {
 
 gulp.task('serve', () => {
   return browserSync({
+    open: false,
+    notify: false,
+    reloadOnRestart: true,
+    logLevel: 'warn',
     server: {
       baseDir: 'dist'
     }
