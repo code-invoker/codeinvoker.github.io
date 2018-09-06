@@ -1,0 +1,17 @@
+@import './components/test';
+
+body {
+  display: flex;
+  background: orange;
+  color: pink;
+
+  div {
+    padding: 5rem;
+    background: lime;
+  }
+}
+
+p {
+  color: blue;
+}
+
