@@ -1,8 +1,11 @@
 module.exports = (api) => {
-  console.log(api);
   return {
+    map: true,
     plugins: {
-      autoprefixer: {}
+      'postcss-import': {},
+      'precss': {},
+      'autoprefixer': {},
+      'cssnano': {}
     }
   };
 };
