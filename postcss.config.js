@@ -1,11 +1,13 @@
 module.exports = (api) => {
+  const production = api.env.trim() == 'production';
+
   return {
-    map: true,
+    map: !production ? 'inline' : false,
     plugins: {
       'postcss-import': {},
       'precss': {},
-      'autoprefixer': {},
-      'cssnano': {}
+      'autoprefixer': production ? {} : false,
+      'cssnano': production ? {} : false
     }
   };
 };
