@@ -41,7 +41,7 @@ gulp.task('serve', () => {
   });
 });
 
-gulp.task('watch', gulp.parallel('styles', 'scripts', 'serve', () => {
+gulp.task('dev', gulp.series('styles', 'scripts', 'serve', () => {
   gulp.watch([ './dist/**/*.html', '!./public' ]).on('change', (path) => {
     return gulp.src(path)
       .pipe(browserSync.reload({ stream: true }));
@@ -51,4 +51,6 @@ gulp.task('watch', gulp.parallel('styles', 'scripts', 'serve', () => {
   gulp.watch('./src/assets/scripts/**/*.js', gulp.series('scripts'));
 }));
 
-gulp.task('default', gulp.series('watch'));
+gulp.task('prod', gulp.series('styles', 'scripts'));
+
+gulp.task('default', gulp.series('dev'));
