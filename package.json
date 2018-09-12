@@ -32,8 +32,8 @@
         "webpack-stream": "^5.1.1"
     },
     "scripts": {
-        "dev": "SET NODE_ENV=development && gulp",
-        "prod": "SET NODE_ENV=production && gulp"
+        "dev": "SET NODE_ENV=development && gulp dev",
+        "prod": "SET NODE_ENV=production && gulp prod"
     },
     "eslintIgnore": [
         "!.*.js",
