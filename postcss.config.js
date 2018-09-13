@@ -6,6 +6,7 @@ module.exports = (api) => {
     plugins: {
       'postcss-import': {},
       'precss': {},
+      'css-mqpacker': production ? {} : false,
       'autoprefixer': production ? {} : false,
       'cssnano': production ? {} : false
     }
