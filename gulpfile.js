@@ -44,7 +44,6 @@ gulp.task('serve', () => {
 
 gulp.task('dev', gulp.parallel('serve', () => {
   gulp.watch([ './dist/**/*.html' ]).on('change', (path) => {
-    console.log(path);
     return gulp.src(path)
       .pipe(browserSync.reload({ stream: true }));
   });
