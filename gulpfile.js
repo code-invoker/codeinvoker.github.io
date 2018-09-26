@@ -30,19 +30,21 @@ gulp.task('scripts', () => {
 });
 
 gulp.task('serve', () => {
-  return browserSync({
+  browserSync({
+    server: {
+      baseDir: 'dist'
+    },
+    injectChanges: true,
     open: false,
     notify: false,
     reloadOnRestart: true,
-    logLevel: 'warn',
-    server: {
-      baseDir: 'dist'
-    }
+    logLevel: 'warn'
   });
 });
 
-gulp.task('dev', gulp.series('styles', 'scripts', 'serve', () => {
-  gulp.watch([ './dist/**/*.html', '!./public' ]).on('change', (path) => {
+gulp.task('dev', gulp.parallel('serve', () => {
+  gulp.watch([ './dist/**/*.html' ]).on('change', (path) => {
+    console.log(path);
     return gulp.src(path)
       .pipe(browserSync.reload({ stream: true }));
   });
