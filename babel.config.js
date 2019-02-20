@@ -1,7 +1,15 @@
 module.exports = (api) => {
-  api.cache(true);
+    const isProduction = api.env('production');
 
-  return {
-    presets: [ '@babel/preset-env' ]
-  };
+    const presets = [
+        '@babel/env'
+    ];
+
+    isProduction && presets.concat(...[
+        'minify'
+    ]);
+
+    return {
+        presets
+    };
 };
