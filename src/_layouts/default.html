@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="{{ description }}">
+    <meta property="og:title" content="{{ title }}">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="{{ site.name }}">
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    <meta property="og:description" content="{{ description }}">
+    <title>Document</title>
+    <link rel="stylesheet" href="/public/app.css">
+</head>
+
+<body>
+    {% include header.html %}
+    <section class="section">
+        {{ content }}
+    </section>
+    <script src="/public/app.js"></script>
+    {% include footer.html %}
+</body>
+
+</html>

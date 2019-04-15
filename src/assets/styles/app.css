@@ -1,3 +1,5 @@
-body {
-  background: #efefef;
-}
+@charset 'utf-8';
+
+@import 'settings';
+@import 'layout';
+@import 'components/header';
